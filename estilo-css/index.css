@@ -1,0 +1,414 @@
+/* BLOCO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+
+/* WHATSAPP ICON */
+.links-icons {
+    position: fixed;
+    top: 13%;
+    left: 95%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.links-icons a {
+    text-decoration: none;
+}
+
+.links-icons i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #ffff;
+    box-shadow: 0 0 5px 0 black;
+    width: 30px;
+    /* Ajustado para remover largura conflitante */
+    height: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Adiciona a transição */
+}
+
+/* Efeito de escala ao passar o mouse */
+.links-icons i:hover {
+    transform: scale(1.2);
+    /* Aumenta o ícone para 120% do tamanho original */
+    box-shadow: 0 0 10px 0 black;
+    /* Aumenta a sombra para um efeito mais destacado */
+}
+
+/* BACKGROUND-BODY */
+.background-body {
+    position: absolute;
+    background-image: url('/imgs/background8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30rem;
+    z-index: -99999;
+}
+
+
+/* MENU-HORIZONTAL */
+.menu-options-nav {
+    margin-top: 1rem;
+    height: 3rem;
+    width: 57rem;
+    border-radius: 5rem;
+    box-shadow: 0 2px 4px #011133;
+}
+
+.menu-options-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    background-color: #001749;
+    list-style: none;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+}
+
+.menu-options-ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 7rem;
+    transition: background-color 0.4s ease;
+}
+
+.menu-options-ul li:hover {
+    background-color: #011133;
+    cursor: pointer;
+}
+
+.menu-options-ul li a {
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    color: #ffde59;
+}
+
+.menu-options-ul li:hover a {
+    color: #ffde59;
+}
+
+.menu-options-ul li a {
+    text-decoration: none;
+}
+
+/* MENSAGEM POSITIVA */
+.barra-fixa-inferior {
+    width: 100%;
+    box-shadow: 0 2px 4px #011133;
+}
+
+.mensagem-positiva {
+    display: flex;
+    background-color: #011133;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 10rem;
+    padding: 0 15rem;
+    box-sizing: border-box;
+    color: #ffde59;
+    margin-top: 23.5rem;
+}
+
+/* IMAGEM DE LOGO NA MENSAGEM POSITIVA */
+.logo-tipo {
+    position: relative;
+    top: 21.2rem;
+    width: 20%;
+    height: 2rem;
+}
+
+/* APRESENTAÇÃO DO COLÉGIO */
+
+.colegio-apresentacao {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 6rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 43rem;
+    padding: 0 10rem;
+}
+
+.colegio-apresentacao::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/imgs/background11.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.colegio-superior {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 100%;
+    height: 20rem;
+}
+
+.imgs-apresentacao {
+    background-image: url(/imgs/background7.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40rem;
+    height: 16rem;
+    border-radius: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.texto-de-apresentacao {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.texto-de-apresentacao h1 {
+    font-size: 2.2rem;
+    color: #011133;
+}
+
+.texto-de-apresentacao h3 {
+    font-size: 1.6rem;
+}
+
+.texto-de-apresentacao p {
+    font-size: 1.1rem;
+}
+
+.colegio-inferior {
+    display: flex;
+    height: 10rem;
+    width: 100%;
+    flex-direction: row;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.mensagem-da-equipe {
+    max-width: 61.1%;
+    text-align: left;
+}
+
+/* TEXTO COLORIDO CONHEÇA NOSSA FAMLIIA RUSSEL */
+.conheca-a-familia {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    text-align: center;
+    gap: 0.2rem;
+    justify-content: center;
+}
+
+
+.conheca-a-familia h2 {
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+/* GALERIA DE IMAGENS */
+.aconteceu-no-colegio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #011133;
+    padding: 4rem 2rem;
+    height: 70rem;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 4px 0 4px 4px #000d2a;
+}
+
+.aconteceu-titulo{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: 6rem;
+    align-items: center;
+    box-shadow: 0 4px 2px #ffde59;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.aconteceu-titulo span{
+    color: #ffde59;
+}
+
+.gallery-container {
+    text-align: center;
+    width: 75%;
+}
+
+#main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.thumbnail {
+    width: 8.3rem;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+/* FORMULARIO */
+.formulario-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35rem;
+    width: 100%;
+    background-color: #011133;
+    text-align: center;
+    align-items: center;
+}
+
+.form-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    gap: 2rem;
+    color: #ffde59;
+}
+
+.form-infos a{
+    color: #ffde59;
+    text-decoration: none;
+}
+
+.form-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    gap: 2rem;
+    color: #ffde59;
+}
+
+.form-container {
+    background-color: #ADD8E6;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 27rem;
+    text-align: center;
+    height: 25rem;
+    box-shadow: 0 2px 4px rgb(164, 208, 223)
+}
+
+.form-container h1 {
+    color: #0044CC;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-group input {
+    width: 100%; 
+}
+
+.form-container input, textarea {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.form-container textarea {
+    height: 8rem;
+}
+
+.form-container button {
+    background-color: #87CEEB;
+    color: #0044CC;
+    padding: 0.7rem;
+    box-shadow: 0 0 2px #0044CC;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 40%;
+}
+
+.form-container button:hover {
+    background-color: #0044CC;
+    color: #fff;
+}
+
+.inputer{
+    width: 80%;
+}
+
