@@ -37,12 +37,11 @@ body {
     align-items: center;
     font-size: 1.5rem;
     color: #ffff;
-    box-shadow: 0 0 5px 0 black;
     width: 30px;
     /* Ajustado para remover largura conflitante */
     height: 30px;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s ease, 0.3s ease;
     /* Adiciona a transição */
 }
 
@@ -88,6 +87,7 @@ body {
     align-items: center;
     box-sizing: border-box;
     padding: 0 1.5rem;
+    font-size: 1.2rem;
 }
 
 .menu-options-ul li {
@@ -253,7 +253,7 @@ body {
 }
 
 /* GALERIA DE IMAGENS */
-.aconteceu-no-colegio{
+.aconteceu-no-colegio {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,7 +266,7 @@ body {
     box-shadow: 4px 0 4px 4px #000d2a;
 }
 
-.aconteceu-titulo{
+.aconteceu-titulo {
     display: flex;
     justify-content: center;
     width: 75%;
@@ -278,7 +278,7 @@ body {
     color: white;
 }
 
-.aconteceu-titulo span{
+.aconteceu-titulo span {
     color: #ffde59;
 }
 
@@ -305,63 +305,58 @@ body {
     height: auto;
     cursor: pointer;
     border-radius: 5px;
-    transition: transform 0.2s;
+    transition: 0.2s;
 }
 
 .thumbnail:hover {
     transform: scale(1.1);
 }
 
-/* FORMULARIO */
+/* formulario geral */
 .formulario-box {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     height: 35rem;
     width: 100%;
     background-color: #011133;
     text-align: center;
     align-items: center;
+    gap: 2rem;
+    padding: 0 5rem;
+    box-sizing: border-box;
 }
+
+/* informações ao lado esquerdo do form */
 
 .form-infos {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 30%;
+    width: 25%;
     height: 100%;
     gap: 2rem;
-    color: #ffde59;
+    color: #ffffff;
 }
 
-.form-infos a{
-    color: #ffde59;
+.form-infos a {
+    color: #ffffff;
     text-decoration: none;
 }
 
-.form-options {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 30%;
-    height: 100%;
-    gap: 2rem;
-    color: #ffde59;
-}
+/* formulario central */
 
 .form-container {
-    background-color: #ADD8E6;
     padding: 2rem;
     border-radius: 1rem;
-    width: 27rem;
+    width: 50%;
     text-align: center;
     height: 25rem;
-    box-shadow: 0 2px 4px rgb(164, 208, 223)
 }
 
 .form-container h1 {
-    color: #0044CC;
-    font-size: 2rem;
+    color: #ffffff;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -378,13 +373,13 @@ body {
 }
 
 .input-group input {
-    width: 100%; 
+    width: 7rem;
 }
 
 .form-container input, textarea {
     padding: 0.5rem;
     border-radius: 0.5rem;
-    border: 1px solid #ccc;
+    border: none;
     font-size: 1rem;
 }
 
@@ -393,21 +388,59 @@ body {
 }
 
 .form-container button {
-    background-color: #87CEEB;
-    color: #0044CC;
+    background-color: transparent;
+    color: #ffffff;
     padding: 0.7rem;
-    box-shadow: 0 0 2px #0044CC;
+    box-shadow: 0 0 2px 1px #000000;
     border-radius: 0.5rem;
     cursor: pointer;
     font-size: 1rem;
-    width: 40%;
+    width: 6rem;
+    border: none;
 }
 
 .form-container button:hover {
-    background-color: #0044CC;
-    color: #fff;
+    background-color: #000d2a;
+    color: #ffffff;
 }
 
-.inputer{
-    width: 80%;
+.inputer {
+    width: 16rem;
+}
+
+/* lista ao lado direito do form */
+
+.form-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    color: #ffffff;
+}
+
+.form-options-nav {
+    height: 100%;
+    width: 100%;
+
+}
+
+.form-options-ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    gap: 1rem;
+}
+
+.form-options-ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+.form-options-ul li a:hover {
+    transform: scale(1.2);
 }
